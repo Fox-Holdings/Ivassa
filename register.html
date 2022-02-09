@@ -89,7 +89,7 @@
                     <h4>Fill the Form Below</h4>
                     <!-- <h3>Write a Message</h3> -->
                 </div><!-- /.block-title -->
-                <form action="assets/inc/sendemail.php" class="contact-form-validated contact-one__form">
+                <form action="assets/inc/sendemail.php" method="post" class="contact-form-validated contact-one__form">
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="name" placeholder="Name">
@@ -98,13 +98,13 @@
                             <input type="text" name="email" placeholder="Email">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="phonenumber" placeholder="Phone Number">
+                            <input type="phone" name="phone" placeholder="Phone Number">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="storename" placeholder="Store/Venture's Name">
+                            <input type="text" name="store" placeholder="Store/Venture's Name">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="productcategory" placeholder="Product Category">
+                            <input type="text" name="services" placeholder="Product Category">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
                             <input type="text" name="address" placeholder="Store Address">
@@ -205,7 +205,7 @@
                                 <h3 class="footer-widget__title">Subscribe</h3>
                                 <form class="footer-widget__mc-form mc-form" data-url="MAILCHIMP__POPUP__FORM__URL">
                                     <input type="text" name="email" placeholder="Email address">
-                                    <button type="submit" class="thm-btn footer-widget__mc-btn">Submit</button>
+                                    <button type="submit" method= "post" class="thm-btn footer-widget__mc-btn">Submit</button>
                                 </form>
                                 <div class="mc-form__response"></div><!-- /.mc-form__response -->
                             </div><!-- /.footer-widget footer-widget__subscribe -->

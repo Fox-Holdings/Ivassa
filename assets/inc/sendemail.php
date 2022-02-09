@@ -1,8 +1,8 @@
 <?php
 
 // Define some constants
-define( "RECIPIENT_NAME", "John Doe" );
-define( "RECIPIENT_EMAIL", "mail@mail.com" );
+define( "RECIPIENT_NAME", "Leo" );
+define( "RECIPIENT_EMAIL", "oyindamolamuritala@gmail.com" );
 
 // Read the form values
 $success = false;
@@ -12,7 +12,7 @@ $phone = isset( $_POST['phone'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", 
 $services = isset( $_POST['services'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['services'] ) : "";
 $subject = isset( $_POST['subject'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject'] ) : "";
 $address = isset( $_POST['address'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['address'] ) : "";
-$website = isset( $_POST['website'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['website'] ) : "";
+$discuss = isset( $_POST['discuss'] ) ? preg_replace( "/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['website'] ) : "";
 $message = isset( $_POST['message'] ) ? preg_replace( "/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message'] ) : "";
 
 $mail_subject = 'A contact request send by ' . $name;
@@ -22,10 +22,12 @@ $body .= 'Email: '. $senderEmail . "\r\n";
 
 
 if ($phone) {$body .= 'Phone: '. $phone . "\r\n"; }
-if ($services) {$body .= 'services: '. $services . "\r\n"; }
+if ($services) {$body .= 'Services: '. $services . "\r\n"; }
 if ($subject) {$body .= 'Subject: '. $subject . "\r\n"; }
 if ($address) {$body .= 'Address: '. $address . "\r\n"; }
-if ($website) {$body .= 'Website: '. $website . "\r\n"; }
+if ($discuss) {$body .= 'Discuss: '. $discuss . "\r\n"; }
+if ($city) {$body .= 'City: '. $city . "\r\n"; }
+if ($store) {$body .= 'Store: '. $store . "\r\n"; }
 
 $body .= 'message: ' . "\r\n" . $message;
 
