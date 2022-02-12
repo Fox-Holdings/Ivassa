@@ -89,7 +89,7 @@
                     <h4>Fill the Form Below</h4>
                     <!-- <h3>Write a Message</h3> -->
                 </div><!-- /.block-title -->
-                <form action="assets/inc/sendemail.php" class="contact-form-validated contact-one__form">
+                <form method="POST" action="assets/inc/sendemail.php" class="contact-form-validated contact-one__form">
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="name" placeholder="Name">
@@ -154,7 +154,7 @@
                         </div><!-- /.col-md-6 -->
                         
                         <div class="col-md-12" class="result">
-                            <button type="submit" method="post" class="thm-btn contact-one__form-btn">Submit</button>
+                            <input type="submit" name="submit" class="thm-btn contact-one__form-btn">
                         </div><!-- /.col-md-12 -->
                     </div><!-- /.row -->
                 </form><!-- /.contact-one__form -->
