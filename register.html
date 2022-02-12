@@ -89,7 +89,7 @@
                     <h4>Fill the Form Below</h4>
                     <!-- <h3>Write a Message</h3> -->
                 </div><!-- /.block-title -->
-                <form action="assets/inc/sendemail.php" method="post" class="contact-form-validated contact-one__form">
+                <form action="assets/inc/sendemail.php" class="contact-form-validated contact-one__form">
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="name" placeholder="Name">
@@ -98,16 +98,16 @@
                             <input type="text" name="email" placeholder="Email">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="phone" name="phone" placeholder="Phone Number">
+                            <input type="phonenumber" name="phone" placeholder="Phone Number">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="store" placeholder="Store/Venture's Name">
+                            <input type="text" name="store" placeholder="Store/Venture Name">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="services" placeholder="Product Category">
+                            <input type="text" name="product" placeholder="Products Category">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
-                            <input type="text" name="address" placeholder="Store Address">
+                            <input type="text" name="address" placeholder="Store/Venture Address">
                         </div><!-- /.col-md-6 -->
                         <div class="col-md-6">
                             <input type="text" name="city" placeholder="City">
@@ -153,8 +153,8 @@
                             </select>
                         </div><!-- /.col-md-6 -->
                         
-                        <div class="col-md-12">
-                            <button type="submit" class="thm-btn contact-one__form-btn">Submit</button>
+                        <div class="col-md-12" class="result">
+                            <button type="submit" method="post" class="thm-btn contact-one__form-btn">Submit</button>
                         </div><!-- /.col-md-12 -->
                     </div><!-- /.row -->
                 </form><!-- /.contact-one__form -->
@@ -162,6 +162,8 @@
             </div><!-- /.contact-one__form-wrap -->
         </div><!-- /.col-lg-6 -->
         </div>
+    </div>
+
         
 
         
@@ -191,9 +193,9 @@
                                         <li><a href="#">Latest Blog</a></li> -->
                                     <!-- </ul>/.list-unstyled -->
                                     <ul class="list-unstyled">
-                                        <li><a href="#banner">Mart</a></li>
-                                        <li><a href="#pricing">Travel</a></li>
-                                        <li><a href="#contact">Contact us</a></li>
+                                        <li><a href="index.html">Mart</a></li>
+                                        <li><a href="index.html">Travel</a></li>
+                                        <li><a href="index.html">Contact us</a></li>
                                         <!-- <li><a href="#">Privacy Policy</a></li>
                                         <li><a href="#">Terms & Condition</a></li> -->
                                     </ul><!-- /.list-unstyled -->
@@ -205,7 +207,7 @@
                                 <h3 class="footer-widget__title">Subscribe</h3>
                                 <form class="footer-widget__mc-form mc-form" data-url="MAILCHIMP__POPUP__FORM__URL">
                                     <input type="text" name="email" placeholder="Email address">
-                                    <button type="submit" method= "post" class="thm-btn footer-widget__mc-btn">Submit</button>
+                                    <button type="submit" method="post" class="thm-btn footer-widget__mc-btn">Submit</button>
                                 </form>
                                 <div class="mc-form__response"></div><!-- /.mc-form__response -->
                             </div><!-- /.footer-widget footer-widget__subscribe -->
@@ -220,7 +222,7 @@
                             <a class="fab fa-facebook-f" href="#"></a>
                             <a class="fab fa-twitter" href="#"></a>
                             <a class="fab fa-instagram" href="https://www.instagram.com/officialivassa/?hl=en"></a>
-                            
+                           
                         </div><!-- /.site-footer__social -->
                         <p>© copyright 2022 by CountryTech & Media</p>
                     </div><!-- /.inner-container -->
