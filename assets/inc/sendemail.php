@@ -13,6 +13,8 @@ $services = isset($_POST['services']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "
 $subject = isset($_POST['subject']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['subject']) : "";
 $address = isset($_POST['address']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['address']) : "";
 $discuss = isset($_POST['discuss']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['discuss']) : "";
+$city = isset($_POST['city']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['city']) : "";
+$store = isset($_POST['store']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['store']) : "";
 $message = isset($_POST['message']) ? preg_replace("/(From:|To:|BCC:|CC:|Subject:|Content-Type:)/", "", $_POST['message']) : "";
 
 $mail_subject = 'A contact request send by ' . $name;
@@ -37,12 +39,12 @@ if ($discuss) {
   $body .= 'Discuss: ' . $discuss . "\r\n";
 }
 $body .= 'message: ' . "\r\n" . $message;
-// if ($city) {
-//   $body .= 'City: ' . $city . "\r\n";
-// }
-// if ($store) {
-//   $body .= 'Store: ' . $store . "\r\n";
-// }
+if ($city) {
+  $body .= 'City: ' . $city . "\r\n";
+}
+if ($store) {
+  $body .= 'Store: ' . $store . "\r\n";
+}
 
 
 // If all values exist, send the email
